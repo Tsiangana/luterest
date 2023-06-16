@@ -1,0 +1,190 @@
+
+    :root{
+        --black: rgb(24, 23, 23);
+        --red: #e60023;
+        --border: 1px solid rgba(102, 101, 101, 0.753);
+    }
+
+    *{
+        transition: 0.5s;
+    }
+
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track{
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background-color: var(--black);
+    }
+
+
+    .headding{
+        text-align: center;
+        font-size: 35px;
+        color: var(--red);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .gallery{
+        min-height: 100vh;
+        padding: 20px;
+        margin-left: 420px;
+    }
+
+    .gallery .image-container{
+        columns: 3 350px;
+        column-gap: 15px;
+    }
+
+    .gallery .image-container img{
+        width: 100%;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border-radius: 16px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+        transition: 1s;
+        background-color: #fff;
+    }
+
+    .gallery .image-container img:hover{
+        transform: scale(.95);
+        transition: 1s;
+    }
+
+    .side-bar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 400px;
+        background: rgb(247, 243, 243);
+        padding: 20px;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .side-bar::-webkit-scrollbar{
+        width: 5px;
+    }
+
+    .side-bar .box .title{
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: black;
+        text-transform: uppercase;
+    }
+
+    .side-bar .box{
+        border-bottom: var(--border);
+        padding: 20px 0px;
+    }
+
+    .side-bar #search-box{
+        width: 95%;
+        border: var(--border);
+        padding: 12px;
+        font-size: 17px;
+        color: var(--black);
+        text-transform: none;
+    }
+
+    .side-bar .box .btn{
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 10px;
+        background-color: var(--black);
+        color: #fff;
+        font-size: 17px;
+        padding: 10px 30px;
+        text-transform: capitalize;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .side-bar .box .btn:hover,
+    .side-bar .box .btn.active{
+        background-color: var(--red);
+        transition: 0.5s;
+    }
+
+    #side-menu{
+        position: fixed;
+        top: 20px;left: 20px;
+        z-index: 1200;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        color: var(--black);
+        background-color: #fff;
+        border: var(--border);
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0,.1);
+        text-align: center;
+        cursor: pointer;
+        display: none;
+    }
+
+    .popup-image{
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 1200;
+        background-color: rgba(145, 143, 143, 0.288);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 20px;
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+    }
+
+    .popup-image img{
+        width: 600px;
+        background-color: rgba(145, 143, 143, 0.288);
+        border: 10px solid rgba(145, 143, 143, 0.288);
+        cursor: pointer;
+    }
+
+
+    /*media querys*/
+
+    @media(max-width:991px) {
+        #side-menu{
+            display: inline-block;
+        }
+        #side-menu.fa-times{
+            left: 450px;
+            top: 10;
+        }
+        .side-bar{
+            left: -450px;
+        }
+        .side-bar.active{
+            box-shadow: 0 0 0 100vw rgba(145, 143, 143, 0.288);
+            left: 0;
+        }
+        .gallery{
+            margin-left: 10px;
+        }
+    }
+
+    @media(max-width:768px){
+        .popup-image img{
+            width: 100%;
+        }
+    }
+
+    @media(max-width:490px){
+        #side-menu.fa-times{
+            left: 20px;
+            top: 20px;
+        }
+        .side-bar.active{
+            padding-top: 40px;
+        }
+        
+    }

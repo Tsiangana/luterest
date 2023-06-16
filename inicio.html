@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luterest</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+
+    <div id="side-menu" class="fas fa-bars"></div>
+
+    <div class="side-bar">
+        <h1 class="headding">Luterest</h1>
+
+        <div class="box">
+            <h3 class="title">search image: </h3>
+            <input type="text" placeholder="search..." id="search-box">
+        </div>
+        <div class="box">
+            <h3 class="title">Category:</h3>
+            <div class="Category">
+                <div class="btn active" data-category="all">all</div>
+                <div class="btn" data-category="food">food</div>
+                <div class="btn" data-category="toys">toys</div>
+                <div class="btn" data-category="water">water</div>
+                <div class="btn" data-category="animals">aimals</div>
+                <div class="btn" data-category="natureza">natureza</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3 class="title">type:</h3>
+            <div class="type">
+                <div class="btn active" data-type="all">all type</div>
+                <div class="btn" data-type="jpg">jpg</div>
+                <div class="btn" data-type="png">png</div>
+                <div class="btn" data-type="svg">svg</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="gallery">
+        <h1 class="headding">image gallery</h1>
+
+        <div class="image-container">
+            <img src="fundo/1.jpg" data-image="waderfull" data-search="espaco siberal incrivel" id="1"> 
+            <img src="fundo/2.jpg" data-image="food" data-search="prato delicioso" id="2">
+            <img src="fundo/7.svg" data-image="toys" data-search="briquedo de super mario" id="3">
+            <img src="fundo/4.jpg" data-image="water" data-search="cascatas de angola" id="4">
+            <img src="fundo/5.jpg" data-image="natureza" data-search="uma das sete maravilhas de angola" id="5">
+            <img src="fundo/6.png" data-image="animals" data-search="o rei da selva leao" id="6">
+            <img src="fundo/5.jpg" data-image="natureza" data-search="uma das sete maravilhas de angola" id="7">
+            <img src="fundo/6.png" data-image="animals" data-search="o rei da selva leao" id="8">
+        </div>
+    </div>
+
+    <div class="popup-image"><img src="fundo/1.jpg"></div>
+
+
+
+    
+    <script src="script1.js"></script>
+</body>
+</html>
